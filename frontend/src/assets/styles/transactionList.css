@@ -1,0 +1,134 @@
+/* Modern Transaction List & Rows */
+.transaction-history-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.t-date-group, .t-box {
+    margin-bottom: 20px;
+}
+
+.t-date-header, .t-box .date {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    padding: 0 4px;
+}
+
+.t-date-header i {
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+.t-list-card, .t-list {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.t-row-item, .t-list .t-row {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+
+.t-row-item:last-of-type, .t-list .t-row:last-of-type {
+    border-bottom: none;
+}
+
+.t-row-item:hover, .t-list .t-row:hover {
+    background-color: var(--hover);
+}
+
+.t-row-left-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.t-category-badge {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    transition: var(--transition-fast);
+}
+
+.t-category-badge.income {
+    background: var(--income-bg);
+    color: var(--income);
+}
+
+.t-category-badge.expense {
+    background: var(--expense-bg);
+    color: var(--expense);
+}
+
+.t-row-meta, .t-row-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.t-category-name, .t-row-left p:first-of-type {
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.t-description, .t-row-left p:last-of-type {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.t-row-right-content, .t-row-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.t-amount-tag, .t-row-right p {
+    font-size: 1.05rem;
+    font-weight: 800;
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+}
+
+.t-amount-tag.positive {
+    color: var(--income);
+}
+
+.t-amount-tag.negative {
+    color: var(--expense);
+}
+
+.t-row-arrow {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    transition: var(--transition-fast);
+}
+
+.t-row-item:hover .t-row-arrow {
+    color: var(--primary);
+    transform: translateX(3px);
+}
